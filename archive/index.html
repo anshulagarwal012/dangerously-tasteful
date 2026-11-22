@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Dangerously Tasteful: Fashion Archive Edition</title>
+<meta name="description" content="The four fashion archives from the reel: ARCHIVE.pdf, firstVIEW, the Kyoto Costume Institute and We Wear Culture.">
+<meta property="og:title" content="Dangerously Tasteful: Fashion Archive Edition">
+<meta property="og:description" content="The four fashion archives from the reel: ARCHIVE.pdf, firstVIEW, the Kyoto Costume Institute and We Wear Culture.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://anshulagarwal012.github.io/dangerously-tasteful/archive/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0}img{max-width:100%}</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Give+You+Glory&family=IBM+Plex+Mono:wght@400;500&family=Poppins:wght@400;500;600&display=swap">
+<style>
+  /* Layout: same page as the Fashion edition. One phone-width column read like the reel: hook, the four archives in reel order, peace out. */
+  :root {
+    --bg: #f5f7f6;
+    --surface: #ffffff;
+    --fg: #121614;
+    --muted: #5d6965;
+    --line: #dde4e1;
+    --mint: #b2e9e3;
+    --mint-ink: #1d6f66;
+    --display: "Poppins", "Avenir Next", "Helvetica Neue", Arial, sans-serif;
+    --hand: "Give You Glory", "Bradley Hand", "Segoe Print", cursive;
+    --mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0e1110; --surface: #161b19; --fg: #eef2f0; --muted: #8f9b97; --line: #26302d;
+      --mint: #b2e9e3; --mint-ink: #b2e9e3; color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0e1110; --surface: #161b19; --fg: #eef2f0; --muted: #8f9b97; --line: #26302d;
+    --mint: #b2e9e3; --mint-ink: #b2e9e3; color-scheme: dark;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: var(--display);
+    font-size: 1rem;
+    line-height: 1.55;
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+  }
+  .page {
+    max-width: 34rem;
+    margin: 0 auto;
+    padding-block: 2.75rem 3.5rem;
+    display: grid;
+    gap: 2.5rem;
+  }
+
+  .handle {
+    font-family: var(--mono);
+    font-size: 0.78rem;
+    letter-spacing: 0.06em;
+    color: var(--muted);
+    text-decoration: none;
+  }
+  .handle:hover, .handle:focus-visible { color: var(--fg); }
+  header { display: grid; gap: 1.1rem; }
+  .hook { margin: 0; display: grid; gap: 0.35rem; }
+  .hook .pre {
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+  .hook .big {
+    font-size: clamp(2.3rem, 11vw, 3.4rem);
+    font-weight: 600;
+    line-height: 0.98;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    text-wrap: balance;
+  }
+  .hook .big span { display: block; }
+  .hook .big .hl {
+    background: linear-gradient(transparent 58%, var(--mint) 58%, var(--mint) 92%, transparent 92%);
+    width: fit-content;
+  }
+  .edition {
+    font-family: var(--hand);
+    font-size: 2rem;
+    line-height: 1;
+    transform: rotate(-3deg);
+    transform-origin: left center;
+    width: fit-content;
+    margin-top: 0.2rem;
+  }
+  .intro { margin: 0; color: var(--muted); max-width: 30rem; }
+
+  ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.75rem; }
+  .res {
+    display: grid;
+    grid-template-columns: 2.1rem minmax(0, 1fr);
+    gap: 0.25rem 0.9rem;
+    padding: 1.1rem 1.1rem 1.15rem;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    color: inherit;
+    text-decoration: none;
+    transition: border-color 0.18s ease, transform 0.18s ease;
+  }
+  .res:hover { border-color: var(--mint-ink); transform: translateY(-1px); }
+  .res:focus-visible { outline: 2px solid var(--mint-ink); outline-offset: 3px; }
+  .num {
+    grid-row: span 4;
+    font-family: var(--mono);
+    font-size: 0.8rem;
+    color: var(--mint-ink);
+    padding-top: 0.28rem;
+  }
+  .top { display: flex; align-items: baseline; justify-content: space-between; gap: 0.75rem; min-width: 0; }
+  .name { font-size: 1.2rem; font-weight: 600; line-height: 1.25; }
+  .go { font-family: var(--mono); font-size: 0.74rem; color: var(--muted); white-space: nowrap; }
+  .res:hover .go { color: var(--mint-ink); }
+  .what { margin: 0; color: var(--muted); font-size: 0.93rem; }
+  .tip { margin: 0.15rem 0 0; font-size: 0.88rem; }
+  .tip b { font-weight: 500; color: var(--mint-ink); }
+  /* each archive's span, the detail only an archive has */
+  .span {
+    margin-top: 0.55rem;
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.04em;
+    color: var(--muted);
+    font-variant-numeric: tabular-nums;
+    border-top: 1px dashed var(--line);
+    padding-top: 0.5rem;
+  }
+
+  footer { display: grid; gap: 0.9rem; padding-top: 1.2rem; border-top: 1px solid var(--line); }
+  .peace { font-family: var(--hand); font-size: 2.6rem; line-height: 1; transform: rotate(-3deg); transform-origin: left center; width: fit-content; }
+  .follow { font-size: 0.9rem; color: var(--muted); margin: 0; }
+  .follow a { color: var(--fg); text-decoration-color: var(--mint-ink); text-underline-offset: 3px; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .res { transition: none; }
+  }
+</style>
+</head>
+<body>
+<main class="page">
+  <header>
+    <a class="handle" href="https://www.instagram.com/anshulagg_/" target="_blank" rel="noopener">@anshulagg_</a>
+    <h1 class="hook">
+      <span class="pre">Resources for people who want to be</span>
+      <span class="big"><span>Dangerously</span><span class="hl">Tasteful</span></span>
+    </h1>
+    <div class="edition" aria-hidden="true">Fashion Archive Edition</div>
+    <p class="intro">The four fashion archives from the reel, in the same order. Tap one to open it.</p>
+  </header>
+
+  <ol>
+    <li>
+      <a class="res" href="https://www.archivepdf.net" target="_blank" rel="noopener">
+        <span class="num">01</span>
+        <span class="top"><span class="name">ARCHIVE.pdf</span><span class="go">archivepdf.net ↗</span></span>
+        <p class="what">Free scans of rare old fashion magazines, lookbooks and catalogs, page by page. Plus interviews with designers.</p>
+        <p class="tip"><b>Start with</b> the Raf Simons A/W 2002 "Virginia Creeper" catalog under Scans. It takes about 20 seconds to load.</p>
+        <span class="span">magazines · lookbooks · catalogs</span>
+      </a>
+    </li>
+    <li>
+      <a class="res" href="https://www.firstview.com" target="_blank" rel="noopener">
+        <span class="num">02</span>
+        <span class="top"><span class="name">firstVIEW</span><span class="go">firstview.com ↗</span></span>
+        <p class="what">Runway shows look by look, from way before Instagram. Started by two runway photographers. Free to browse.</p>
+        <p class="tip"><b>Try</b> Photographs → Search designers by name → Helmut Lang → Spring/Summer 1998, Men</p>
+        <span class="span">shooting shows since 1995</span>
+      </a>
+    </li>
+    <li>
+      <a class="res" href="https://www.kci.or.jp/en/archives/digital_archives/" target="_blank" rel="noopener">
+        <span class="num">03</span>
+        <span class="top"><span class="name">Kyoto Costume Institute</span><span class="go">kci.or.jp ↗</span></span>
+        <p class="what">A fashion institute in Japan that collects over 300 years of Western clothes. Every piece comes with a write-up.</p>
+        <p class="tip"><b>Try</b> Search by Date → 2000s → the 2006 Dior Homme suit by Hedi Slimane</p>
+        <span class="span">online archive: 1740s → 2020s</span>
+      </a>
+    </li>
+    <li>
+      <a class="res" href="https://artsandculture.google.com/project/fashion" target="_blank" rel="noopener">
+        <span class="num">04</span>
+        <span class="top"><span class="name">We Wear Culture</span><span class="go">google arts &amp; culture ↗</span></span>
+        <p class="what">The fashion section of Google Arts &amp; Culture, with clothes from over 180 museums and archives, like the Met and the V&amp;A.</p>
+        <p class="tip"><b>Try</b> searching shirt, or zoom into the V&amp;A's embroidered dragon robe until you see the stitches</p>
+        <span class="span">180+ museums &amp; archives</span>
+      </a>
+    </li>
+  </ol>
+
+  <footer>
+    <div class="peace" aria-hidden="true">Peace out</div>
+    <p class="follow">Missed the first one? <a href="../fashion/">The Fashion edition</a></p>
+    <p class="follow">More menswear, minus the brain rot: <a href="https://www.instagram.com/anshulagg_/" target="_blank" rel="noopener">@anshulagg_</a></p>
+  </footer>
+</main>
+</body>
+</html>
