@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0a0a0a">
+<title>Make it last</title>
+<meta name="description" content="How to wear perfume so it lasts, and which bottle to buy.">
+<meta property="og:title" content="Make it last">
+<meta property="og:description" content="How to wear perfume so it lasts, and which bottle to buy.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://anshulagarwal012.github.io/dangerously-tasteful/perfume/">
+<meta property="og:image" content="https://anshulagarwal012.github.io/dangerously-tasteful/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Give+You+Glory&family=IBM+Plex+Mono:wght@400;500&family=Jost:wght@300;400;500&display=swap">
+<style>
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;font-family:"Jost","Avenir Next",Futura,sans-serif;font-size:1.0625rem;line-height:1.5}
+a{color:inherit}
+.mono{font-family:"IBM Plex Mono",ui-monospace,Menlo,monospace;font-size:.74rem;letter-spacing:.04em}
+.wide{text-transform:uppercase;letter-spacing:.2em;font-weight:400}
+:focus-visible{outline:2px solid currentColor;outline-offset:3px}
+.col{max-width:34rem;margin:0 auto;padding-inline:max(20px,env(safe-area-inset-left))}
+/* home */
+body.home{background:#0a0a0a;color:#fff}
+.hero{position:relative;max-width:34rem;margin:0 auto}
+.hero img{display:block;width:100%;height:auto;aspect-ratio:1080/1180;object-fit:cover}
+.hero::after{content:"";position:absolute;inset:62% 0 -1px;background:linear-gradient(transparent,#0a0a0a 88%)}
+.who{position:relative;z-index:1;margin-top:-2.6rem;display:grid;gap:.35rem}
+.who h1{margin:0;font-weight:300;font-size:clamp(1.45rem,7vw,2.1rem);line-height:1.1;letter-spacing:.2em;text-transform:uppercase}
+.who p{margin:0;color:#b9b9b9}
+.who .ig{justify-self:start;color:#8d8d8d;text-decoration:none;padding:.35rem 0}
+.who .ig:hover{color:#fff}
+.links{display:grid;gap:2.1rem;padding-block:1.6rem 1rem}
+.links h2{margin:0 0 .65rem;color:#8d8d8d;font-weight:400}
+.links ul{list-style:none;margin:0;padding:0;border-top:1px solid #333}
+.links li{border-bottom:1px solid #333}
+.row{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:4rem;padding:.7rem .1rem;text-decoration:none;transition:background .15s,color .15s,padding .15s}
+.row b{font-weight:400;font-size:.98rem;line-height:1.3;text-transform:uppercase;letter-spacing:.15em}
+.row span{color:#8d8d8d;white-space:nowrap}
+.row:hover,.row:active{background:#fff;color:#0a0a0a;padding-inline:.9rem}
+.row:hover span,.row:active span{color:#0a0a0a}
+.bye{padding-block:1.4rem 3.2rem;display:flex;justify-content:space-between;align-items:center}
+.bye i{font-family:"Give You Glory",cursive;font-style:normal;font-size:2.1rem;line-height:1}
+.bye span{font-size:1.6rem}
+/* guide */
+body.guide{background:#f6f4ef;color:#141414}
+.cover{background:#0a0a0a;color:#fff}
+.cover .col{padding-block:1.4rem 2.4rem;display:grid;gap:2.6rem}
+.cover nav{display:flex;justify-content:space-between}
+.cover nav a{color:#a8a8a8;text-decoration:none;padding:.4rem 0}
+.cover nav a:hover{color:#fff}
+.cover h1{margin:0;font-weight:300;font-size:clamp(1.75rem,8.6vw,2.6rem);line-height:1.16;letter-spacing:.18em;text-transform:uppercase}
+.cover p{margin:.7rem 0 0;color:#a8a8a8}
+.body{padding-block:2.2rem 3rem;display:grid;gap:2.6rem}
+.sec{display:grid;gap:1.35rem}
+.sec>h2{margin:0;font-weight:400;color:#767676;border-bottom:1px solid #141414;padding-bottom:.6rem}
+.it{display:grid;gap:.55rem}
+.it h3{margin:0;font-weight:500;font-size:1rem;letter-spacing:.14em;text-transform:uppercase}
+.it p,.sec>p,.st>p{margin:0}.sec>p.g{color:#5e5e5e}
+.it p.g{color:#5e5e5e}
+.sw{list-style:none;margin:.1rem 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.8rem .5rem}
+.sw.n4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.sw li{display:grid;gap:.35rem;line-height:1.3}
+.sw i{display:block;height:4.2rem;border:1px solid rgba(0,0,0,.12)}
+.kv{margin:0;display:grid;grid-template-columns:4rem minmax(0,1fr);gap:.25rem .6rem}
+.kv dt{color:#767676;padding-top:.22rem}.kv dd{margin:0}
+.face{display:grid;grid-template-columns:5.2rem minmax(0,1fr);gap:1.1rem;align-items:start}
+.face img{width:100%;height:auto;display:block}
+.face .kv{grid-template-columns:2.6rem minmax(0,1fr)}
+.go{display:grid;gap:.7rem}
+.btn{display:flex;justify-content:space-between;align-items:center;gap:1rem;min-height:3.6rem;padding:.8rem 1.1rem;border:1px solid #141414;text-decoration:none;font-size:.9rem;letter-spacing:.15em;text-transform:uppercase}
+.btn.k{background:#141414;color:#fff}
+.pic{display:block;width:100%;height:auto}
+.bleed{margin-inline:calc(-1*max(20px,env(safe-area-inset-left)));width:calc(100% + 2*max(20px,env(safe-area-inset-left)));max-width:none}
+@media(min-width:40rem){.bleed{margin-inline:0;width:100%}}
+.st2{width:100%;height:2.6rem;display:block;color:#141414}
+.btn:hover{background:#f6f4ef;color:#141414}.btn:not(.k):hover{background:#141414;color:#fff}
+.btn span{letter-spacing:.04em;text-transform:none;white-space:nowrap}
+.end{font-family:"Give You Glory",cursive;font-size:2.2rem;line-height:1}
+@media (prefers-reduced-motion:reduce){.row{transition:none}}
+</style>
+</head>
+<body class="guide">
+<header class="cover"><div class="col">
+  <nav class="mono"><a href="../">← all guides</a><a href="https://www.instagram.com/anshulagg_/" target="_blank" rel="noopener">@anshulagg_</a></nav>
+  <div><h1>Make it<br>last</h1><p>your perfume, all day</p></div>
+</div></header>
+<main class="col body">
+<section class="sec"><h2 class="wide mono">moisturise first</h2><img class="pic" src="dry.jpg" alt="Dry skin fades faster, moisturised skin holds the scent" loading="lazy"><p>Dry skin makes the scent fade faster. Use a lotion that smells close to your perfume, or an unscented one so nothing clashes.</p></section>
+<section class="sec"><h2 class="wide mono">pulse points</h2><img class="pic" src="pulse.jpg" alt="Wrists, neck, behind the ears" loading="lazy"><p>Wrists, neck, behind your ears. They stay warm and let the scent out slowly. And don't rub your wrists: rubbing heats the skin, and the first notes fade faster.</p></section>
+<section class="sec"><h2 class="wide mono">skin, not just clothes</h2><img class="pic" src="skin.jpg" alt="On skin it opens up, on clothes it only holds" loading="lazy"><p>Clothes hold the smell longer, but the warmth of your skin is what opens it up.</p></section>
+<section class="sec"><h2 class="wide mono">read the bottle</h2><img class="pic" src="types.jpg" alt="Eau de toilette least oil, eau de parfum more oil, parfum most oil" loading="lazy"><p>More oil usually means it lasts longer. The formula matters too, so test it on your skin.</p></section>
+<section class="sec"><h2 class="wide mono">one extra: hair perfume</h2><img class="pic" src="hair.jpg" alt="Hair perfume sprayed on hair" loading="lazy"><p>Hair holds scent really well. Use one made for hair, because the alcohol in regular perfume can dry it out.</p></section>
+<section class="sec"><h2 class="wide mono">save this</h2><img class="pic" src="save.jpg" alt="How to wear perfume, in six steps" loading="lazy"><p>The idea isn't to smell strong the moment you walk in. It's to leave a scent people still notice after you've left.</p></section>
+<div class="go"><a class="btn k" href="perfume-guide.pdf" target="_blank" rel="noopener">Full guide <span class="mono">pdf ↗</span></a><a class="btn" href="https://www.instagram.com/anshulagg_/reel/DfZ7d79BwL-/" target="_blank" rel="noopener">Watch the reel <span class="mono">instagram ↗</span></a></div>
+<div class="end">Peace out</div>
+</main>
+</body>
+</html>

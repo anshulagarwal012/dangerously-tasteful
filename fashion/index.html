@@ -23,7 +23,7 @@
     --muted: #5d6965;
     --line: #dde4e1;
     --mint: #b2e9e3;
-    --mint-ink: #1d6f66;
+    --mint-ink: #1d6f66; --hl: #b2e9e3;
     --bar: #c9d3d0;
     --display: "Poppins", "Avenir Next", "Helvetica Neue", Arial, sans-serif;
     --hand: "Give You Glory", "Bradley Hand", "Segoe Print", cursive;
@@ -32,12 +32,12 @@
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
       --bg: #0e1110; --surface: #161b19; --fg: #eef2f0; --muted: #8f9b97; --line: #26302d;
-      --mint: #b2e9e3; --mint-ink: #b2e9e3; --bar: #34403c; color-scheme: dark;
+      --mint: #b2e9e3; --mint-ink: #b2e9e3; --hl: #1c6a61; --bar: #34403c; color-scheme: dark;
     }
   }
   :root[data-theme="dark"] {
     --bg: #0e1110; --surface: #161b19; --fg: #eef2f0; --muted: #8f9b97; --line: #26302d;
-    --mint: #b2e9e3; --mint-ink: #b2e9e3; --bar: #34403c; color-scheme: dark;
+    --mint: #b2e9e3; --mint-ink: #b2e9e3; --hl: #1c6a61; --bar: #34403c; color-scheme: dark;
   }
 
   body {
@@ -84,7 +84,7 @@
   }
   .hook .big span { display: block; }
   .hook .big .hl {
-    background: linear-gradient(transparent 58%, var(--mint) 58%, var(--mint) 92%, transparent 92%);
+    background: linear-gradient(transparent 58%, var(--hl) 58%, var(--hl) 92%, transparent 92%);
     width: fit-content;
   }
   .edition {
@@ -225,6 +225,7 @@
     <p class="sorry">Sorry in advance about your screen time.<span>daily average after this: 6h 42m</span></p>
     <div class="peace" aria-hidden="true">Peace out</div>
     <p class="follow">Next one: <a href="../archive/">the Fashion Archive edition</a></p>
+    <p class="follow"><a href="../">All guides and links</a></p>
     <p class="follow">More menswear, minus the brain rot: <a href="https://www.instagram.com/anshulagg_/" target="_blank" rel="noopener">@anshulagg_</a></p>
   </footer>
 </main>
