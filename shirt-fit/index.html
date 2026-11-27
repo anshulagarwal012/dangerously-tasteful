@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0a0a0a">
+<title>Which shirt fit</title>
+<meta name="description" content="Slim, regular, relaxed or oversized: the shirt fit made for your body, plus how to check the size and pick the fabric.">
+<meta property="og:title" content="Which shirt fit">
+<meta property="og:description" content="Slim, regular, relaxed or oversized: the shirt fit made for your body, plus how to check the size and pick the fabric.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://anshulagg.vercel.app/shirt-fit/">
+<meta property="og:image" content="https://anshulagg.vercel.app/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Give+You+Glory&family=IBM+Plex+Mono:wght@400;500&family=Jost:wght@300;400;500&display=swap">
+<style>
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;font-family:"Jost","Avenir Next",Futura,sans-serif;font-size:1.0625rem;line-height:1.5}
+a{color:inherit}
+.mono{font-family:"IBM Plex Mono",ui-monospace,Menlo,monospace;font-size:.74rem;letter-spacing:.04em}
+.wide{text-transform:uppercase;letter-spacing:.2em;font-weight:400}
+:focus-visible{outline:2px solid currentColor;outline-offset:3px}
+.col{max-width:34rem;margin:0 auto;padding-inline:max(20px,env(safe-area-inset-left))}
+/* home */
+body.home{background:#0a0a0a;color:#fff}
+.who{padding-top:max(3.4rem,calc(env(safe-area-inset-top) + 2.4rem));display:grid;gap:.5rem}
+.who h1{margin:0;font-weight:300;font-size:clamp(2.4rem,14vw,4.6rem);line-height:1.02;letter-spacing:.1em;margin:0 -.1em .5rem -.04em;text-transform:uppercase}
+.who p{margin:0;color:#b9b9b9}
+.who .ig{justify-self:start;color:#8d8d8d;text-decoration:none;padding:.35rem 0}
+.who .ig:hover{color:#fff}
+.links{display:grid;gap:2.1rem;padding-block:2.6rem 1rem}
+.links h2{margin:0 0 .65rem;color:#8d8d8d;font-weight:400}
+.links ul{list-style:none;margin:0;padding:0;border-top:1px solid #333}
+.links li{border-bottom:1px solid #333}
+.row{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:4rem;padding:.7rem .1rem;text-decoration:none;transition:background .15s,color .15s,padding .15s}
+.row b{font-weight:400;font-size:.98rem;line-height:1.3;text-transform:uppercase;letter-spacing:.15em}
+.row span{color:#8d8d8d;white-space:nowrap}
+.row:hover,.row:active{background:#fff;color:#0a0a0a;padding-inline:.9rem}
+.row:hover span,.row:active span{color:#0a0a0a}
+.bye{padding-block:1.4rem 3.2rem;display:flex;justify-content:space-between;align-items:center}
+.bye i{font-family:"Give You Glory",cursive;font-style:normal;font-size:2.1rem;line-height:1}
+.bye span{font-size:1.6rem}
+/* guide */
+body.guide{background:#f6f4ef;color:#141414}
+.cover{background:#0a0a0a;color:#fff}
+.cover .col{padding-block:1.4rem 2.4rem;display:grid;gap:2.6rem}
+.cover nav{display:flex;justify-content:space-between}
+.cover nav a{color:#a8a8a8;text-decoration:none;padding:.4rem 0}
+.cover nav a:hover{color:#fff}
+.cover h1{margin:0;font-weight:300;font-size:clamp(1.75rem,8.6vw,2.6rem);line-height:1.16;letter-spacing:.18em;text-transform:uppercase}
+.cover p{margin:.7rem 0 0;color:#a8a8a8}
+.body{padding-block:2.2rem 3rem;display:grid;gap:2.6rem}
+.sec{display:grid;gap:1.35rem}
+.sec>h2{margin:0;font-weight:400;color:#767676;border-bottom:1px solid #141414;padding-bottom:.6rem}
+.it{display:grid;gap:.55rem}
+.it h3{margin:0;font-weight:500;font-size:1rem;letter-spacing:.14em;text-transform:uppercase}
+.it p,.sec>p,.st>p{margin:0}.sec>p.g{color:#5e5e5e}
+.it p.g{color:#5e5e5e}
+.sw{list-style:none;margin:.1rem 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.8rem .5rem}
+.sw.n4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.sw li{display:grid;gap:.35rem;line-height:1.3}
+.sw i{display:block;height:4.2rem;border:1px solid rgba(0,0,0,.12)}
+.kv{margin:0;display:grid;grid-template-columns:4rem minmax(0,1fr);gap:.25rem .6rem}
+.kv dt{color:#767676;padding-top:.22rem}.kv dd{margin:0}
+.face{display:grid;grid-template-columns:5.2rem minmax(0,1fr);gap:1.1rem;align-items:start}
+.face img{width:100%;height:auto;display:block}
+.face .kv{grid-template-columns:2.6rem minmax(0,1fr)}
+.go{display:grid;gap:.7rem}
+.btn{display:flex;justify-content:space-between;align-items:center;gap:1rem;min-height:3.6rem;padding:.8rem 1.1rem;border:1px solid #141414;text-decoration:none;font-size:.9rem;letter-spacing:.15em;text-transform:uppercase}
+.btn.k{background:#141414;color:#fff}
+.pic{display:block;width:100%;height:auto}
+.bleed{margin-inline:calc(-1*max(20px,env(safe-area-inset-left)));width:calc(100% + 2*max(20px,env(safe-area-inset-left)));max-width:none}
+@media(min-width:40rem){.bleed{margin-inline:0;width:100%}}
+.st2{width:100%;height:2.6rem;display:block;color:#141414}
+.btn:hover{background:#f6f4ef;color:#141414}.btn:not(.k):hover{background:#141414;color:#fff}
+.btn span{letter-spacing:.04em;text-transform:none;white-space:nowrap}
+.end{font-family:"Give You Glory",cursive;font-size:2.2rem;line-height:1}
+@media (prefers-reduced-motion:reduce){.row{transition:none}}
+</style>
+</head>
+<body class="guide">
+<header class="cover"><div class="col">
+  <nav class="mono"><a href="../">← all guides</a><a href="https://www.instagram.com/anshulagg_/" target="_blank" rel="noopener">@anshulagg_</a></nav>
+  <div><h1>Which<br>shirt fit</h1><p>made for your body</p></div>
+</div></header>
+<main class="col body">
+<section class="sec"><h2 class="wide mono">the four fits</h2><img class="pic" src="fits.jpg" alt="Slim, regular, relaxed and oversized shirts on the same body" loading="lazy"><p>Slim follows your shape. Regular is cut straight. Relaxed is a little roomy. Oversized is boxy, with a dropped shoulder.</p></section>
+<section class="sec"><h2 class="wide mono">lean or slim body</h2><img class="pic" src="lean.jpg" alt="Lean body, slim fit shirt in your actual size" loading="lazy"><p>Go for a slim fit in your actual size. It follows your shape and gives you a really sharp look.</p></section>
+<section class="sec"><h2 class="wide mono">broad shoulders, slim waist</h2><img class="pic" src="broadslim.jpg" alt="Broad shoulders and a slim waist in a slim fit shirt" loading="lazy"><p>A slim fit can work on you too.</p></section>
+<section class="sec"><h2 class="wide mono">buttons pulling?</h2><img class="pic" src="broadpull.jpg" alt="Slim fit shirt pulling across a broad chest" loading="lazy"><p>If the buttons start pulling across your chest, the slim fit isn't for you.</p></section>
+<section class="sec"><h2 class="wide mono">then go regular</h2><img class="pic" src="broadreg.jpg" alt="Regular fit shirt with more room up top" loading="lazy"><p>A regular fit gives you more room up top.</p></section>
+<section class="sec"><h2 class="wide mono">stomach wider than chest</h2><img class="pic" src="bellyreg.jpg" alt="Regular fit shirt cut straight from the chest down" loading="lazy"><p>Go for a regular fit. It's cut straight from the chest down, so it doesn't stick to your stomach.</p></section>
+<section class="sec"><h2 class="wide mono">don't size up to hide it</h2><img class="pic" src="bellybig.jpg" alt="A shirt one size too big makes the stomach look bigger" loading="lazy"><p>Buying a size bigger only makes it look bigger. Get the right fit in your size.</p></section>
+<section class="sec"><h2 class="wide mono">relaxed & oversized</h2><img class="pic" src="style.jpg" alt="Relaxed and oversized shirts" loading="lazy"><p>These are more of a style choice, for when you want that casual, laid-back look.</p></section>
+<section class="sec"><h2 class="wide mono">check the fit up top</h2><div class="it"><h3>Shoulders</h3><p>The seam sits on the edge of your shoulder bone. Up on the shoulder is too small, down your arm is too big. Oversized drops it on purpose.</p></div><div class="it"><h3>Buttons</h3><p>They lie flat. No pulling, no X-shaped creases across the chest.</p></div><div class="it"><h3>Collar</h3><p>Buttoned up, one or two fingers slide in.</p></div></section>
+<section class="sec"><h2 class="wide mono">check the length</h2><div class="it"><h3>Sleeves</h3><p>The cuff ends at your wrist bone.</p></div><div class="it"><h3>Length</h3><p>Untucked, the hem lands around the middle of your zip.</p></div><div class="it"><h3>Size chart</h3><p>Sizes change from brand to brand. Check the chest and length numbers, not just S / M / L.</p></div></section>
+<section class="sec"><h2 class="wide mono">pick the fabric</h2><div class="it"><h3>Slim fit</h3><p>A little stretch, cotton with some elastane, lets you move without the buttons pulling.</p></div><div class="it"><h3>Indian heat</h3><p>Linen breathes and dries fast, but it wrinkles. A cotton-linen blend wrinkles less.</p></div><div class="it"><h3>Everyday</h3><p>Cotton poplin is smooth and light, good for work. Oxford is thicker and more casual.</p></div></section>
+<section class="sec"><h2 class="wide mono">save this</h2><img class="pic" src="save.jpg" alt="Which shirt fit for which body, in four lines" loading="lazy"></section>
+<div class="go"><a class="btn k" href="shirt-fit-guide.pdf" target="_blank" rel="noopener">Full guide <span class="mono">pdf ↗</span></a></div>
+<div class="end">Peace out</div>
+</main>
+</body>
+</html>
